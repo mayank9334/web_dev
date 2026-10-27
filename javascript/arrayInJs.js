@@ -53,5 +53,10 @@ write -
         arrayname.shift();
 
 */
-marksarray.pop();
-console.log(marksarray) ;
+
+marksarray.pop(); //delete element from end
+marksarray.shift(); //delete element from start.
+console.log(marksarray); //2 element has deleted, 1 from start & one from end.
+
+marksarray.sort(); // used to sort array element numbers.
+console.log(marksarray);
