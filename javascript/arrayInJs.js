@@ -6,7 +6,6 @@ console.log(marksarray);
 ie - int , str, object , function etc
 */
 
-console.log (marksarray.length);
+console.log(marksarray.length);
 
 /* after array_name use "." to see other inbuilt features for the array */
-
