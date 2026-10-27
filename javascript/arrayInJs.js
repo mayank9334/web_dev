@@ -1,16 +1,17 @@
 let marksarray = [50, 60, 85, 73, 65];
 
-console.log(marksarray);
+//console.log(marksarray);
 
 /*as it is a loosely typed language , so any type of variable can be stored in this array.
 ie - int , str, object , function etc
 */
 
-console.log(marksarray.length);
+//console.log(marksarray.length);
 
 /* after array_name use "." to see other inbuilt features for the array */
 
-/*can change array values, by accessing through indexes ie marksarray[2] = "mayank" ;
+/*can change array values, by accessing through indexes 
+ie marksarray[2] = "mayank" ;
 output = [50, 60, "mayank", 73, 65];
 */
 
@@ -21,3 +22,36 @@ output = [50, 60, "mayank", 73, 65];
 ie - newarr = marksarray; but changing in this array will affect both arrays, bqz both are situated on same memory locations.
 
 */
+
+/* arrayname.indexof(element);
+
+will tell the index of that element in array.
+*/
+
+/* arrayname.includes(element) 
+
+is a boolean method, tells about the given element is present in array or not , output will be true/false.
+*/
+
+/* to push something at the end of array 
+write -
+    arrayname.push(elementvalue) ;
+    
+to push into end of array
+*/
+
+/* to push element at the begining of the array write -
+             arrayname.unshift(elementvalue);
+*/
+
+/* to delete element from the end of array
+write-
+       arrayname.pop();
+
+to delete from begining of array,
+write -
+        arrayname.shift();
+
+*/
+marksarray.pop();
+console.log(marksarray) ;
