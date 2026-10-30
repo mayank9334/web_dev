@@ -10,22 +10,40 @@ function getCandies(callback1) {
     console.log("these are your candies :", candies);
     callback1(candies);
     //return candies;
-  }, 5000);
+  }, 3000);
 }
 
 function getKeys(candies, callback2) {
   setTimeout(() => {
-    const keys = "Lo chabi" ; candies ;
+    const keys = "Lo chabi";
+    candies;
     console.log("here is your keys :", keys);
     callback2(keys);
-  }, 5000);
+  }, 2000);
 }
 
+function mostWelcome(keys, callback3) {
+  setTimeout(() => {
+    const welcomed = keys + " & roses.";
+    console.log("your most welcome :", welcomed);
+    callback3(welcomed);
+  }, 2000);
+}
 
 //console.log(getCandies());
-getCandies((candies) => { 
-  getKeys(candies, (keys) => { //nested function
-    console.log("Hello bhaiya, ye le :", keys, "&", candies);
+getCandies((candies) => {
+  getKeys(candies, (keys) => {
+    //nested function
+
+    mostWelcome(keys, (welcomed) => {
+      //nested (callback hell essi liye bolte hn esse. function call stack dekho)
+      console.log(
+        "Hello bhaiya! most welcome. ye le :",
+        welcomed,
+        "&",
+        candies,
+      );
+    });
   });
 });
 
