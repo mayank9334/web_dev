@@ -50,5 +50,3 @@ const printFirstNegativeNumber = (num) => {
 arr.forEach( (num, index) => { //array.forEach() method executes a provided function once for each array element.
     console.log(`Element at index ${index}: ${num}`);
 });
-
-
