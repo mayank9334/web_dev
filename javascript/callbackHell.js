@@ -2,7 +2,7 @@
 
 // syntax :
 
-/* setTimeOut ( callback() , time in milliseconds ) */
+/* setTimeOut ( callback() , time in milliseconds(sec *1000) */
 
 function getCandies(callback1) {
   setTimeout(() => {
