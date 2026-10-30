@@ -6,16 +6,27 @@
 
 function getCandies(callback1) {
   setTimeout(() => {
-    const candies = "le beta lamchus";
+    const candies = "lamchus";
     console.log("these are your candies :", candies);
-    callback1( candies ) ;
+    callback1(candies);
     //return candies;
-  }, 5000); 
+  }, 5000);
 }
 
+function getKeys(candies, callback2) {
+  setTimeout(() => {
+    const keys = "Lo chabi" ; candies ;
+    console.log("here is your keys :", keys);
+    callback2(keys);
+  }, 5000);
+}
+
+
 //console.log(getCandies());
-getCandies((candies) => {
-  console.log("here is our candies :", candies);
+getCandies((candies) => { 
+  getKeys(candies, (keys) => { //nested function
+    console.log("Hello bhaiya, ye le :", keys, "&", candies);
+  });
 });
 
 // must wait for 5000 milliseconds hahaha..
