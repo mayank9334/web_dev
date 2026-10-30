@@ -49,3 +49,8 @@ getCandies((candies) => {
 
 // must wait for 5000 milliseconds hahaha..
 // settimeout is a function in js , write it as same.(error: i wrote setTimeOut, o was uppercase, creating an error.)
+/* 
+essi callback hell ko tackle krne ke liye js me 
+promises ka concept aaya hai 
+
+*/
