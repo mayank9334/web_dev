@@ -33,3 +33,10 @@ console.log("2. filter :" , filterNew);
 const findArr = myArray.find((data) => data<30)
 
 console.log("3. find : " , findArr);
+
+const reduceArr = myArray.reduce( (accumulatorValue, currentValue ) =>{
+         return accumulatorValue + currentValue ;
+  
+},0)
+
+console.log(" 4. reduce, sum of all array elements :" , reduceArr) ;
