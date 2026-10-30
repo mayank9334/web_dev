@@ -26,4 +26,10 @@ const filterNew = myArray.filter((data) => {//another basic way to write same th
     }
 })
 
-console.log(filterNew);
+console.log("2. filter :" , filterNew);
+
+// 3. find
+
+const findArr = myArray.find((data) => data<30)
+
+console.log("3. find : " , findArr);
