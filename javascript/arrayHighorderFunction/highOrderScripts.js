@@ -40,3 +40,39 @@ const reduceArr = myArray.reduce( (accumulatorValue, currentValue ) =>{
 },0)
 
 console.log(" 4. reduce, sum of all array elements :" , reduceArr) ;
+
+const cartItems = 
+[
+
+  { name : "laptop",
+    price : 400,
+    quantity : 2
+  },
+
+  { name : "water bottle",
+    price : 30,
+    quantity : 4
+  },
+
+ { name : "table",
+   price : 100 ,
+   quantity : 1 
+ }
+]
+
+const totalPrice = cartItems.reduce( (accValue , currValue) =>
+  { return accValue + currValue.price * currValue.quantity ;
+    },0 )
+
+console.log( totalPrice ) ;
+
+//reduce syntax :
+/* it reduces the array to one value.
+chahe add ya multiply ya koi operation krke saare
+elements ki 1 value deta hai.
+
+syntax : array.reduce( callback() , 0 ) 
+
+here 0 is accumulator value or start value.
+
+*/
