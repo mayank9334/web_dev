@@ -157,11 +157,12 @@ async function hotalManagement () {
         console.log("your most welcome :", welcomed);
     }
 
-    catch(error){
+    catch(error){ //takes error parameter from reject() method block.
         console.log("error occured :", error);
     }
 }
 
 hotalManagement ();
 
-// so must try & catch block for handling error massages.
+// so must try & catch block for handling error massages if used reject method in any of function or 
+// it is good practice to add try and catch() block to every async and await function.
