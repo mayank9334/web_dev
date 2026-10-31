@@ -82,7 +82,8 @@ function getKeys(candies) {
     return new Promise( (resolve,reject) => {
         setTimeout(() => {
     const keys = "Lo chabi " +candies;
-    resolve(keys);
+    // resolve(keys);
+    reject("can't exacute it.")
   }, 2000);
     })
   
@@ -98,15 +99,69 @@ function mostWelcome(keys) {
 
 }
 
+/*
+// .then ki chain se bachne ke liye , async await ka use krte hn.
+
 getCandies()
     .then( (candies)=>{
     console.log("these are your candies :", candies);
     return getKeys(candies)
 
-}).then( (keys)=>{
+   }).then( (keys)=>{
     console.log("here is your keys :", keys);
     return mostWelcome(keys)
 
-}).then( (welcomed)=>{
+   }).then( (welcomed)=>{
     console.log("your most welcome :", welcomed);
-})
+   
+   }).catch((error)=>{ //see the catch syntax, interesting one.
+    console.log("error occured :", error);
+   })
+
+*/
+
+
+//async & await
+
+// async function hotalManagement () {
+//     const candy = await getCandies();
+//     console.log("these are your candies :", candy);
+
+//     const keys = await getKeys(candy);
+//     console.log("here is your keys :", keys);
+
+//     const welcomed = await mostWelcome(keys);
+//     console.log("your most welcome :", welcomed);
+// }
+
+// hotalManagement ();
+
+//if you have used any reject method then it will show an error
+//so do not use if there is no error or rejection.
+// windows + . used for getting emojis.
+
+//handling errors also in async & await.
+
+//use try and catch block.
+
+async function hotalManagement () {
+
+    try{
+        const candy = await getCandies();
+        console.log("these are your candies :", candy);
+
+        const keys = await getKeys(candy);
+        console.log("here is your keys :", keys);
+
+        const welcomed = await mostWelcome(keys);
+        console.log("your most welcome :", welcomed);
+    }
+
+    catch(error){
+        console.log("error occured :", error);
+    }
+}
+
+hotalManagement ();
+
+// so must try & catch block for handling error massages.
