@@ -1,3 +1,51 @@
+/*promises are for overcoming the problem of callback hell,
+here we'll see how it overcomes hell problems.
+
+promises(an object in js) has three conditions -
+  1. success (resolved)
+  2. failure (rejected)
+  3. still processing (pending)
+
+promise methods :
+ (1) resolve ko .then() handle krta hai
+ (2) reject ko ya error ko .catch() handle krta hai
+ (3) .finally() success or failure ko dhyan diye bina exacute ho jata hai.
+
+when storing promise in a variable , can simply written as 
+ new Promise((resolve, reject)=> {// function code here})
+
+but when promise has to use in function :
+ return new Promise ((resolve, reject)=> {// function code here})
+
+//why return here , it immediately return promise object.
+
+A simple example here :
+program:
+
+Promise.resolve(10)
+
+    .then((value) => {
+        console.log(value);
+        return value * 2;
+    })
+
+    .then((value) => {
+        console.log(value);
+        return value + 5;
+    })
+
+    .then((value) => {
+        console.log(value);
+    });
+
+The key concept:
+ >Every .then() returns a new Promise.
+ >If you return a normal value from .then(), the next .then() receives that value.
+ >This is called Promise chaining.
+ >promise initially pending state me hota hai.
+
+*/
+
 // const ticket = new Promise ( function (resolve , reject){
 //    const isresponded = true;
 
